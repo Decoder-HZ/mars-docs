@@ -8,6 +8,7 @@
 include/
 ├── schedule_api.h
 ├── schedule_type.h
+├── schedule_err.h
 ```
 
 ### include/schedule_api.h
