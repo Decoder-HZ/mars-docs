@@ -168,43 +168,33 @@ int MarsNetInstGetParameter(HINSTANCE hinst, const char* param, char* value, int
 
 #### mars/mars_err.h
 
-```c++
-#ifndef NNET_MARS_ERR_HPP
-#define NNET_MARS_ERR_HPP
-
-enum
-{
-    MARS_SUCCESS                            = 0,
-    MARS_ERROR_GENERAL                      = 10000,
-    MARS_ERROR_ALREADY_INIT,
-    MARS_ERROR_NOT_INIT,
-    MARS_ERROR_RESOURCE_TOO_OLD,
-    MARS_ERROR_RESOURCE_NOT_EXIST,
-    MARS_ERROR_LOAD_FILE,
-    MARS_ERROR_INVALID_PARA,
-    MARS_ERROR_INVALID_PARA_VALUE,
-    MARS_ERROR_BUFFER_SIZE_NOT_ENOUGH,
-    MARS_ERROR_LAYER_INPUT_SIZE_INVALID,
-    MARS_ERROR_LAYER_OUTPUT_DATA_INVALID,
-    MARS_ERROR_NET_TOPOLOGICAL_INVALID,
-    MARS_ERROR_NULL_HANDLE,
-    MARS_ERROR_INVALID_HANDLE,
-    MARS_ERROR_DONNT_SUPPORT,
-    MARS_ERROR_EXCEPTION
-};
-
-#endif // NNET_MARS_ERR_HPP
-```
+| 错误码                            | 值    | 涵义                           |
+| --------------------------------- | ----- | --------------------------|
+| MARS_SUCCESS                      | 0     | 处理成功                    |
+| MARS_ERROR_GENERAL                | 10000 | 处理失败，但不指明具体错误类型 |
+| MARS_ERROR_ALREADY_INIT           | 10001 | 多次初始化                  |
+| MARS_ERROR_NOT_INIT               | 10002 | 未初始化                    |
+| MARS_ERROR_RESOURCE_TOO_OLD       | 10003 | 使用了已被更新的资源          |
+| MARS_ERROR_RESOURCE_NOT_EXIST     | 10004 | 访问的资源不存在             |
+| MARS_ERROR_LOAD_FILE              | 10005 | 加载指定文件失败             |
+| MARS_ERROR_INVALID_PARA           | 10006 | 使用了不合法的参数名          |
+| MARS_ERROR_INVALID_PARA_VALUE     | 10007 | 使用了不合法的参数值          |
+| MARS_ERROR_BUFFER_SIZE_NOT_ENOUGH | 10008 | 提供的缓存空间过小            |
+| MARS_ERROR_LAYER_INPUT_SIZE_INVALID  | 10009 | 提供的层输入大小非法       |
+| MARS_ERROR_LAYER_OUTPUT_DATA_INVALID | 10010 | 层输出数据非法            |
+| MARS_ERROR_NET_TOPOLOGICAL_INVALID   | 10011 | 网络拓扑结构非法           |
+| MARS_ERROR_NULL_HANDLE            | 10012 | 使用了空的句柄               |
+| MARS_ERROR_INVALID_HANDLE         | 10013 | 使用了不合法的句柄            |
+| MARS_ERROR_DONNT_SUPPORT          | 10014 | 使用了不支持的参数组合         |
+| MARS_ERROR_EXCEPTION              | 10015 | 发生了异常                   |
 
 #### mars/common.h
 
 ```c++
-#ifndef NNET_MARS_ERR_HPP
-#define NNET_COMMON_HPP
-
-enum FrameType{FIRST, MID, LAST, SOLE, ANY};
-
-#endif // NNET_COMMON_HPP
+enum FrameType
+{
+  FIRST, MID, LAST, SOLE, ANY
+};
 ```
 
 ## 快速开始
