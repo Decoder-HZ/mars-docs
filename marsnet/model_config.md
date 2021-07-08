@@ -154,8 +154,8 @@ MarsNet的Layer可以是`小op`，如`Gemm`、`Conv2d`、`relu`等，也可以�
 | **input_dim** | int | 输入维度 | `公有` | all | |
 | **output_dim** | int | 输出维度 | `公有` | all | |
 | **active** | str+enum | 激活函数类型 | `公有`| all | Null(`默认`)<br/>Relu<br/>PRelu<br/>LeakyRelu<br/>Sigmoid<br/>Tanh<br/>Swish |
-| **print** | bool | 将层输出写入文件 | `公有`| all | false(`默认`)<br/>true |
-| **append** | bool | 将层输出以追加方式写入文件 | `公有`| all | false(`默认`)<br/>true |
+| **print** | bool | 将层输出写入文件(**调试用**) | `公有`| all | false(`默认`)<br/>true |
+| **append** | bool | 将层输出以追加方式写入文件(**调试用**) | `公有`| all | false(`默认`)<br/>true |
 | **math** | str+enum | 四则运算 | `特有`| ElemwiseLayer<br/>BraodCastLayer | Add<br/>Sub<br/>Mul<br/>Div|
 | **bias** | bool | 是否有偏置 | `特有` | DenseLayer<br/>Conv1dlayer<br/>Conv2dLayer | false<br/>true(`默认`) |
 | **alpha** | float | 尺度变换 | `特有` | ScaleLayer | |
